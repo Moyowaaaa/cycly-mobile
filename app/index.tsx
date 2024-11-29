@@ -18,6 +18,7 @@ export default function Index() {
         contentContainerStyle={{ flexGrow: 1 }}
         showsVerticalScrollIndicator={false}
       >
+        <Navbar />
         <View style={{ flexGrow: 1 }}>
           <TitleSection />
           <CollectionShowcase />

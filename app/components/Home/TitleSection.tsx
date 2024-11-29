@@ -10,7 +10,7 @@ const TitleSection = () => {
     <View className="flex-1 justify-center h-screen">
       <ImageBackground
         source={require(`../../../assets/images/titleBike.png`)}
-        className="h-full w-full  -z-10"
+        className="h-full w-full  -z-20"
       >
         <View className="w-screen  h-full flex flex-col justify-center gap-4 ">
           <Text className=" w-full text-[5rem] text-[#d9d9d9] font-bold text-center ">

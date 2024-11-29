@@ -23,13 +23,13 @@ const ProductCard = ({ bike }: { bike: bike }) => {
       <View className="h-4/6 w-full ">
         <Image
           source={bike?.images?.preview}
-          className="w-full h-full object-contain "
+          className="w-full h-full object-cover"
           resizeMode="cover"
         />
       </View>
 
       <View className="flex gap-4 px-2">
-        <Text className="text-[1.5rem] font-bold  text-center">
+        <Text className="text-[1.2rem] font-bold  text-center">
           {bike.name}
         </Text>
         <Text className="text-[1rem] text-[black] text-center">

@@ -10,13 +10,12 @@ export default function RootLayout() {
   const router = useRouter();
   return (
     <>
-      <Navbar />
       <Stack
         screenOptions={{
           headerStyle: {
-            backgroundColor: "#151515", // Dark background
+            backgroundColor: "#151515",
           },
-          headerTintColor: "#FFFFFF", // White text color
+          headerTintColor: "#FFFFFF",
           headerTitleStyle: {
             fontWeight: "bold",
           },
@@ -33,7 +32,7 @@ export default function RootLayout() {
           options={{
             headerShown: false,
 
-            title: "Shop", // Add a title if you want
+            title: "Shop",
             headerLeft: () => (
               <Ionicons
                 name="arrow-back"
@@ -45,10 +44,8 @@ export default function RootLayout() {
             ),
             headerStyle: {
               backgroundColor: "#151515",
-
-              // Dark background
             },
-            headerTintColor: "#FFFFFF", // White text color
+            headerTintColor: "#FFFFFF",
           }}
         />
       </Stack>
