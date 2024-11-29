@@ -2,12 +2,14 @@ import React from "react";
 import { ImageBackground, ImageBackgroundBase, Text, View } from "react-native";
 import CustomButton from "../general/CustomButton";
 import { prefixUrl } from "@/constants/constants";
+import { useRouter } from "expo-router";
 
 const TitleSection = () => {
+  const router = useRouter();
   return (
     <View className="flex-1 justify-center h-screen">
       <ImageBackground
-        source={{ uri: `${prefixUrl}titleBike.png` }}
+        source={require(`../../../assets/images/titleBike.png`)}
         className="h-full w-full  -z-10"
       >
         <View className="w-screen  h-full flex flex-col justify-center gap-4 ">
@@ -19,7 +21,7 @@ const TitleSection = () => {
             Discover the joy of cycling with our premium range of bicycles.
           </Text>
 
-          <CustomButton variant="dark" />
+          <CustomButton variant="dark" action={() => router.push("/shop")} />
         </View>
         {/*  */}
       </ImageBackground>

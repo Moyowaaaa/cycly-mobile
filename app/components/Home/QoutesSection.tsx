@@ -3,10 +3,12 @@ import { MaterialIcons } from "@expo/vector-icons";
 import React from "react";
 import { Image, Text, View } from "react-native";
 import CustomButton from "../general/CustomButton";
+import { useRouter } from "expo-router";
 
 const QoutesSection = () => {
+  const router = useRouter();
   return (
-    <View className="flex flex-col self-start pb-16 pt-6  w-full bg-[#151515] flex flex-col  px-10 justify-center">
+    <View className="flex flex-col self-start pb-16 pt-6  w-full bg-[#202020] flex flex-col  px-10 justify-center">
       <Text className="text-[5rem] text-[#dddddd] font-bold">"</Text>
       <Text className="text-[2rem] text-[#dddddd]">
         {" "}
@@ -19,7 +21,7 @@ const QoutesSection = () => {
       </View>
 
       <View className="mt-10">
-        <CustomButton variant="light" />
+        <CustomButton variant="light" action={() => router.push("/shop")} />
       </View>
     </View>
   );

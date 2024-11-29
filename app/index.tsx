@@ -5,20 +5,24 @@ import TitleSection from "./components/Home/TitleSection";
 import CollectionShowcase from "./components/Home/CollectionShowcase";
 import QoutesSection from "./components/Home/QoutesSection";
 import Footer from "./components/general/Footer";
+import JoinUsSection from "./components/Home/JoinUsSection";
+import { StatusBar } from "expo-status-bar";
 
 export default function Index() {
   return (
     <CustomSafeAreaView>
+      <StatusBar style="dark" />
+
       <ScrollView
         className=" bg-white"
-        contentContainerStyle={{ gap: 34, flexGrow: 1, paddingBottom: 28 }}
+        contentContainerStyle={{ flexGrow: 1 }}
         showsVerticalScrollIndicator={false}
       >
-        <Navbar />
-        <View style={{ gap: 34, flexGrow: 1 }}>
+        <View style={{ flexGrow: 1 }}>
           <TitleSection />
           <CollectionShowcase />
           <QoutesSection />
+          <JoinUsSection />
         </View>
         <Footer />
       </ScrollView>

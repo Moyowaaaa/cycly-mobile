@@ -6,22 +6,22 @@ export const prefixUrl =
 export const collections: collectionType[] = [
   {
     title: "City Bikes",
-    image: "cityBike",
+    image: "cityBike.png",
     backgroundColor: "#9747FF",
   },
   {
     title: "Mountain Bikes",
-    image: "mountainBike",
+    image: "mountainBike.png",
     backgroundColor: "#F57804",
   },
   {
     title: "Road Bikes",
-    image: "roadBike",
+    image: "roadBike.png",
     backgroundColor: "#6BF3F3",
   },
   {
     title: "Electric Bikes",
-    image: "electricBike",
+    image: "electricBike.png",
     backgroundColor: "#FFC0CB",
   },
 ];

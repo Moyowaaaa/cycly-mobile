@@ -1,6 +1,7 @@
 import { prefixUrl } from "@/constants/constants";
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
+import CustomImageRenderer from "./CustomImageRenderer";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -16,7 +17,7 @@ const Footer = () => {
 
       <View className="absolute bottom-24 w-full h-[300]">
         <Image
-          source={{ uri: `${prefixUrl}/cityBike.png` }}
+          source={require("../../../assets/images/cityBike.png")}
           alt=""
           className="h-full w-full object-cover"
         />

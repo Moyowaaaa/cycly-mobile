@@ -4,6 +4,13 @@ import React from "react";
 import { Image, Platform, StyleSheet, Text, View } from "react-native";
 
 const CollectionCard = ({ title, backgroundColor, image }: collectionType) => {
+  const imageMap = {
+    "cityBike.png": require("../../../assets/images/cityBike.png"),
+    "mountainBike.png": require("../../../assets/images/mountainBike.png"),
+    "roadBike.png": require("../../../assets/images/roadBike.png"),
+    "electricBike.png": require("../../../assets/images/electricBike.png"),
+  };
+
   return (
     <View
       style={[
@@ -11,11 +18,11 @@ const CollectionCard = ({ title, backgroundColor, image }: collectionType) => {
         { marginRight: 16, backgroundColor: backgroundColor },
       ]}
     >
-      <Text className="text-[3.1rem] font-bold">{title}</Text>
+      <Text className="text-[3.1rem] font-bold text-[black]">{title}</Text>
 
       <View style={styles.image}>
         <Image
-          source={{ uri: `${prefixUrl}/${image}` }}
+          source={imageMap[image as keyof typeof imageMap]}
           alt=""
           className="h-full w-full object-cover"
         />
@@ -42,4 +49,5 @@ const styles = StyleSheet.create({
     height: 200,
   },
 });
+
 export default CollectionCard;
