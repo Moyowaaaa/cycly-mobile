@@ -9,10 +9,10 @@ const Footer = () => {
   return (
     <View
       style={styles.footer}
-      className="h-[65vh] flex justify-start pt-20 pb-10"
+      className="h-[70vh] flex justify-start pt-20 pb-10"
     >
-      <Text className="text-[4rem] text-[#e9e9e9] font-bold text-center">
-        CYCLY OF LIFE.
+      <Text className="text-[5rem] text-[#e9e9e9] font-[SansBold] text-center mx-auto">
+        CYCLE OF LIFE.
       </Text>
 
       <View className="absolute bottom-24 w-full h-[300]">
@@ -23,10 +23,16 @@ const Footer = () => {
         />
       </View>
 
-      <View className="flex absolute flex-row bottom-4  w-full justify-between px-2">
-        <Text className="text-white">Israel x Moyowa</Text>
-        <Text className="text-white">&copy; Cycly {currentYear}</Text>
-        <Text className="text-white">Designooasis</Text>
+      <View
+        className="flex absolute flex-row bottom-4  w-full justify-between px-2
+      
+      "
+      >
+        <Text className="text-white font-[SansRegular]">Israel x Moyowa</Text>
+        <Text className="text-white font-[SansRegular]">
+          &copy; Cycly {currentYear}
+        </Text>
+        <Text className="text-white font-[SansRegular]">Designooasis</Text>
       </View>
     </View>
   );

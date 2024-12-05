@@ -18,7 +18,14 @@ const CollectionCard = ({ title, backgroundColor, image }: collectionType) => {
         { marginRight: 16, backgroundColor: backgroundColor },
       ]}
     >
-      <Text className="text-[3.1rem] font-bold text-[black]">{title}</Text>
+      <Text
+        className="
+      font-[SansMedium]
+      text-[3.1rem] text-[black]
+      font-[700]"
+      >
+        {title}
+      </Text>
 
       <View style={styles.image}>
         <Image

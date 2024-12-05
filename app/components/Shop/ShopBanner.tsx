@@ -4,10 +4,10 @@ import { ImageBackground, StyleSheet, Text, View } from "react-native";
 const ShopBanner = () => {
   return (
     <ImageBackground
-      source={require("../../../assets/images/mountainBikesImage.jpg")}
+      source={require("../../../assets/images/bikesImage.png")}
       style={styles.background}
     >
-      <Text className="text-5xl text-[#ffffff] font-bold">Bikes</Text>
+      <Text className="text-7xl text-[#ffffff] font-[SansBold]">Bikes</Text>
     </ImageBackground>
   );
 };

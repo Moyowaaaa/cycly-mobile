@@ -5,8 +5,12 @@ import CollectionCard from "./CollectionCard";
 
 const CollectionShowcase = () => {
   return (
-    <View className="w-full px-4 flex-1 gap-4 py-12">
-      <Text className="text-[2.5rem] text-[#151515] font-bold text-left">
+    <View className="w-full px-4 flex-1 gap-4 py-24">
+      <Text
+        className="
+      font-[SansBold]
+      text-[4rem] text-[#151515]  text-left"
+      >
         OUR COLLECTION
       </Text>
       <ScrollView

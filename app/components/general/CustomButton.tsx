@@ -23,7 +23,9 @@ const CustomButton = ({ variant, action }: buttonProps) => {
         }`}
       >
         <Text
-          className={`${variant !== "dark" ? "text-[black]" : "text-[white]"}`}
+          className={`${variant !== "dark" ? "text-[black]" : "text-[white]"}
+          font-[SansBold]
+          `}
         >
           Shop
         </Text>

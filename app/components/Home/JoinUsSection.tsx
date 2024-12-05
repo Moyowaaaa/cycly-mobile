@@ -8,11 +8,11 @@ const JoinUsSection = () => {
         source={require("../../../assets/images/joinUsBackgroundd.png")}
         style={styles.background}
       >
-        <View className="pt-12 pb-16 flex justify-center w-full gap-10 w-[25rem] self-start mx-auto items-center">
-          <Text className="text-[4rem] text-[#ffffff] font-bold text-center">
+        <View className="py-24 flex justify-center w-full gap-10 w-[25rem] self-start mx-auto items-center">
+          <Text className="text-[4rem] text-[#ffffff] font-[SansMedium] font-bold text-center">
             Join the Cycle Revolution
           </Text>
-          <Text className="text-[1.5rem] text-white text-center">
+          <Text className="text-[1.25rem] text-white text-center font-[DmMono] px-2">
             {" "}
             Join the e-bike revolution with ReCycle. Our sustainable e-bikes
             save you money and reduce your carbon footprint. Choose your model

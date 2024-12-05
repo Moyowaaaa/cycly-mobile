@@ -1,13 +1,27 @@
 import { Stack, useRouter } from "expo-router";
 import "../global.css";
-import { NativeViewGestureHandler } from "react-native-gesture-handler";
-import { StatusBar } from "expo-status-bar";
-import Footer from "./components/general/Footer";
-import Navbar from "./components/Navbar";
 import { Ionicons } from "@expo/vector-icons";
+import * as SplashScreen from "expo-splash-screen";
+import { useFonts } from "expo-font";
+import { useEffect } from "react";
+
+SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const router = useRouter();
+
+  const [loaded] = useFonts({
+    SansBold: require("../assets/fonts/GeneralSans-Bold.otf"),
+    SansLight: require("../assets/fonts/GeneralSans-Light.otf"),
+    SansMedium: require("../assets/fonts/GeneralSans-Medium.otf"),
+    SansRegular: require("../assets/fonts/GeneralSans-Regular.otf"),
+    DmMono: require("../assets/fonts/DMMono-Regular.ttf"),
+  });
+
+  useEffect(() => {
+    if (loaded) SplashScreen.hideAsync();
+  }, [loaded]);
+
   return (
     <>
       <Stack
