@@ -15,10 +15,10 @@ const CustomButton = ({ variant, action }: buttonProps) => {
           action();
         }
       }}
-      className="flex mx-auto  self-start"
+      className="flex w-full   self-start"
     >
       <View
-        className={`self-start py-6 px-8 flex flex-row gap-4 items-center rounded-[5px] ${
+        className={`self-center py-6 px-6  flex flex-row gap-4 items-center rounded-[5px] ${
           variant === "dark" ? "bg-[black]" : "bg-[white]"
         }`}
       >

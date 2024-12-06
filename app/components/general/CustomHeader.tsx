@@ -12,7 +12,7 @@ const CustomHeader = ({ background, children }: customHeaderProps) => {
       <View
         style={{ backgroundColor: background }}
         className={`
-         w-full flex items-center justify-between flex-row px-2 py-6`}
+         w-full flex items-center justify-between flex-row px-2 `}
       >
         {children}
       </View>

@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import React from "react";
 import { ImageBackground, StyleSheet, Text, View } from "react-native";
 
@@ -21,5 +22,9 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+  },
+  link: {
+    paddingTop: 20,
+    fontSize: 20,
   },
 });

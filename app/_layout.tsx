@@ -4,6 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import { useEffect } from "react";
+import { SheetProvider } from "react-native-actions-sheet";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -24,45 +25,47 @@ export default function RootLayout() {
 
   return (
     <>
-      <Stack
-        screenOptions={{
-          headerStyle: {
-            backgroundColor: "#151515",
-          },
-          headerTintColor: "#FFFFFF",
-          headerTitleStyle: {
-            fontWeight: "bold",
-          },
-        }}
-      >
-        <Stack.Screen
-          name="index"
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Stack.Screen
-          name="shop"
-          options={{
-            headerShown: false,
-
-            title: "Shop",
-            headerLeft: () => (
-              <Ionicons
-                name="arrow-back"
-                size={24}
-                className="mr-10"
-                color={"white"}
-                onPress={() => router.push("/")}
-              />
-            ),
+      <SheetProvider>
+        <Stack
+          screenOptions={{
             headerStyle: {
               backgroundColor: "#151515",
             },
             headerTintColor: "#FFFFFF",
+            headerTitleStyle: {
+              fontWeight: "bold",
+            },
           }}
-        />
-      </Stack>
+        >
+          <Stack.Screen
+            name="index"
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="shop"
+            options={{
+              headerShown: false,
+
+              title: "Shop",
+              headerLeft: () => (
+                <Ionicons
+                  name="arrow-back"
+                  size={24}
+                  className="mr-10"
+                  color={"white"}
+                  onPress={() => router.push("/")}
+                />
+              ),
+              headerStyle: {
+                backgroundColor: "#151515",
+              },
+              headerTintColor: "#FFFFFF",
+            }}
+          />
+        </Stack>
+      </SheetProvider>
     </>
   );
 }
