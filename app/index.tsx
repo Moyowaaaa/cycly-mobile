@@ -13,7 +13,7 @@ import { useStore } from "zustand";
 import { useCartStore } from "@/stores/CartStore";
 
 export default function Index() {
-  const { cart } = useStore(useCartStore);
+  const { itemsInCart } = useStore(useCartStore);
 
   return (
     <CustomSafeAreaView>
@@ -43,7 +43,7 @@ export default function Index() {
               >
                 <Ionicons name="cart-outline" color={"#e9e9e9"} size={32} />
                 <Text className="text-white text-[1.2rem]">
-                  ({cart.length})
+                  ({itemsInCart})
                 </Text>
               </TouchableOpacity>
             </View>

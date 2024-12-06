@@ -1,4 +1,5 @@
 import { bikes } from "@/constants/bikes";
+import { useCartStore } from "@/stores/CartStore";
 import { bike } from "@/types/declarations";
 import { removeLastLetter } from "@/utils/utils";
 import { Ionicons } from "@expo/vector-icons";
@@ -6,9 +7,17 @@ import React, { useMemo } from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 // import * as Svg from "react-native-svg";
 import Svg, { Circle, Path, Rect } from "react-native-svg";
+import { useStore } from "zustand";
 
 const ProductCard = ({ bike }: { bike: bike }) => {
   const type = removeLastLetter(bike.type);
+  const { addItemToCart } = useStore(useCartStore);
+
+  const onAddToCart = () => {
+    if (bike.slug) {
+      addItemToCart(bike.slug, 1);
+    }
+  };
 
   return (
     <View
@@ -58,7 +67,7 @@ const ProductCard = ({ bike }: { bike: bike }) => {
           <TouchableOpacity>
             <Ionicons name="heart-outline" color={"black"} size={24} />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => onAddToCart()}>
             <Ionicons name="cart-outline" color={"black"} size={24} />
           </TouchableOpacity>
         </View>

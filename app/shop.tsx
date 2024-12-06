@@ -16,7 +16,7 @@ import { useCartStore } from "@/stores/CartStore";
 const ShopScreen = () => {
   const router = useRouter();
   const route = useRoute();
-  const { cart } = useStore(useCartStore);
+  const { itemsInCart } = useStore(useCartStore);
   return (
     <>
       <StatusBar style="dark" />
@@ -34,7 +34,7 @@ const ShopScreen = () => {
                 color={"white"}
                 onPress={() => router.push("/")}
               />
-              <Text className="text-[1.5rem] text-white ">Shop</Text>
+              <Text className="text-[1.5rem] text-white">Shop</Text>
             </View>
 
             <View className="flex flex-row gap-2 items-center">
@@ -46,7 +46,7 @@ const ShopScreen = () => {
               >
                 <Ionicons name="cart-outline" color={"#e9e9e9"} size={32} />
                 <Text className="text-white text-[1.2rem]">
-                  ({cart.length})
+                  ({itemsInCart})
                 </Text>
               </TouchableOpacity>
             </View>

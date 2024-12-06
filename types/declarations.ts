@@ -32,3 +32,8 @@ export interface Item {
   slug: string;
   quantity: number;
 }
+
+export interface cartItem extends bike {
+  slug: string;
+  quantity: number;
+}
