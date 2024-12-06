@@ -1,5 +1,6 @@
 import { bikes } from "@/constants/bikes";
 import { bike, Item } from "@/types/declarations";
+import Toast from "react-native-toast-message";
 import { create } from "zustand";
 
 type CartStore = {
@@ -50,8 +51,16 @@ export const useCartStore = create<CartStore>((set, get) => ({
               : item
           )
         : [...state.cart, { slug, quantity }];
+      Toast.show({
+        type: "success",
+        text1: "Item Added",
+        text2: `Added to the cart.`,
+        position: "top",
+      });
+
       return { cart: updatedCart };
     });
+
     get().currentStateValues();
   },
 
@@ -59,6 +68,12 @@ export const useCartStore = create<CartStore>((set, get) => ({
     set((state) => ({
       cart: state.cart.filter((item) => item.slug !== slug),
     }));
+    Toast.show({
+      type: "error",
+      text1: "Item Removed",
+      text2: `Removed from cart.`,
+      position: "top",
+    });
     get().currentStateValues();
   },
 

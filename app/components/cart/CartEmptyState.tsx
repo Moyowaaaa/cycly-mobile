@@ -5,6 +5,9 @@ const CartEmptyState = () => {
   return (
     <>
       <View className="h-[500px] mt-4  bottom-2 w-full relative">
+        <Text className="text-[3rem] font-[SansBold] mt-10 text-center self-center">
+          Cart
+        </Text>
         <View className="h-[350px] w-full  absolute bottom-0">
           <Text className="font-[SansMedium] text-center text-[1.5rem] text-[black] font-[500]">
             No items in cart :)

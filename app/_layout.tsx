@@ -5,6 +5,8 @@ import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import { useEffect } from "react";
 import { SheetProvider } from "react-native-actions-sheet";
+import Toast from "react-native-toast-message";
+import { toastConfig } from "../utils/toastConfig"; // Replace with your path
 
 SplashScreen.preventAutoHideAsync();
 
@@ -65,6 +67,7 @@ export default function RootLayout() {
             }}
           />
         </Stack>
+        <Toast config={toastConfig} />
       </SheetProvider>
     </>
   );
