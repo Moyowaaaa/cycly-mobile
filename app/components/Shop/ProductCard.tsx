@@ -1,21 +1,56 @@
 import { bikes } from "@/constants/bikes";
 import { useCartStore } from "@/stores/CartStore";
+import { useWishlistStore } from "@/stores/WishlistStore";
 import { bike } from "@/types/declarations";
 import { removeLastLetter } from "@/utils/utils";
 import { Ionicons } from "@expo/vector-icons";
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
-// import * as Svg from "react-native-svg";
 import Svg, { Circle, Path, Rect } from "react-native-svg";
+import Toast from "react-native-toast-message";
 import { useStore } from "zustand";
 
 const ProductCard = ({ bike }: { bike: bike }) => {
-  const type = removeLastLetter(bike.type);
+  const {
+    wishlist,
+    addItemToWishList,
+    removeItemFromWishlist,
+    productsInWishlist,
+  } = useStore(useWishlistStore);
+  const [status, setStatus] = useState<boolean>(false);
   const { addItemToCart } = useStore(useCartStore);
 
   const onAddToCart = () => {
     if (bike.slug) {
       addItemToCart(bike.slug, 1);
+    }
+  };
+
+  useEffect(() => {
+    if (bike.slug) {
+      setStatus(wishlist.map((item) => item.slug).includes(bike.slug));
+    }
+  }, [productsInWishlist]);
+
+  const toggleAddToWishlist = () => {
+    if (status) {
+      removeItemFromWishlist(bike.slug as string);
+      setStatus(false);
+      Toast.show({
+        type: "info",
+        text1: "Item Removed",
+        text2: `Removed item from your wishlist.`,
+        position: "top",
+      });
+    } else {
+      addItemToWishList(bike.slug as string);
+      setStatus(true);
+      Toast.show({
+        type: "success",
+        text1: "Item Added",
+        text2: `Added item to your wishlist.`,
+        position: "top",
+      });
     }
   };
 
@@ -64,9 +99,14 @@ const ProductCard = ({ bike }: { bike: bike }) => {
         </View>
 
         <View className="flex flex-row gap-10 mx-auto self-start">
-          <TouchableOpacity>
-            <Ionicons name="heart-outline" color={"black"} size={24} />
+          <TouchableOpacity onPress={() => toggleAddToWishlist()}>
+            <Ionicons
+              name="heart-outline"
+              color={status ? "#F59504" : "black"}
+              size={24}
+            />
           </TouchableOpacity>
+
           <TouchableOpacity onPress={() => onAddToCart()}>
             <Ionicons name="cart-outline" color={"black"} size={24} />
           </TouchableOpacity>

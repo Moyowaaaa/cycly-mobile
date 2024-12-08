@@ -1,12 +1,16 @@
 import { useCartStore } from "@/stores/CartStore";
 import React from "react";
 import { Text, TouchableOpacity, View } from "react-native";
-import ActionSheet, { ScrollView } from "react-native-actions-sheet";
+import ActionSheet, {
+  ScrollView,
+  SheetManager,
+} from "react-native-actions-sheet";
 import { useStore } from "zustand";
 import CartEmptyState from "../cart/CartEmptyState";
 import { Ionicons } from "@expo/vector-icons";
 import CartItem from "../cart/CartItem";
 import { cartItem } from "@/types/declarations";
+import { Link, router } from "expo-router";
 
 const CartSheet = () => {
   const { itemsInCart, clearCart, productsInCart } = useStore(useCartStore);
@@ -53,19 +57,26 @@ const CartSheet = () => {
                   </View>
 
                   {itemsInCart > 0 && (
-                    <View className="flex flex-row gap-2 items-center">
-                      <View className="px-6 py-4 bg-black rounded-xl gap-2 items-center flex flex-row items-center">
-                        <Text className="text-white ">
-                          Checkout {itemsInCart} Item
-                          {itemsInCart > 1 && `s`}
-                        </Text>
-                        <Ionicons
-                          name="arrow-forward"
-                          size={15}
-                          color={"white"}
-                        />
+                    <TouchableOpacity
+                      onPress={() => {
+                        router.push("/checkout");
+                        SheetManager.hide("cartSheet");
+                      }}
+                    >
+                      <View className="flex flex-row gap-2 items-center">
+                        <View className="px-6 py-4 bg-black rounded-xl gap-2 items-center flex flex-row items-center">
+                          <Text className="text-white ">
+                            Checkout {itemsInCart} Item
+                            {itemsInCart > 1 && `s`}
+                          </Text>
+                          <Ionicons
+                            name="arrow-forward"
+                            size={15}
+                            color={"white"}
+                          />
+                        </View>
                       </View>
-                    </View>
+                    </TouchableOpacity>
                   )}
                 </View>
               </View>

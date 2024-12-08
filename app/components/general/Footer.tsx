@@ -1,7 +1,6 @@
 import { prefixUrl } from "@/constants/constants";
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
-import CustomImageRenderer from "./CustomImageRenderer";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -24,7 +23,7 @@ const Footer = () => {
       </View>
 
       <View
-        className="flex absolute flex-row bottom-4  w-full justify-between px-2
+        className="flex absolute flex-row bottom-4  w-full justify-between px-4
       
       "
       >

@@ -17,8 +17,6 @@ export default function Index() {
 
   return (
     <CustomSafeAreaView>
-      <StatusBar style="dark" />
-
       <ScrollView
         className=" bg-white"
         contentContainerStyle={{ flexGrow: 1 }}
@@ -35,7 +33,11 @@ export default function Index() {
             </View>
 
             <View className="flex flex-row gap-2 items-center">
-              <Ionicons name="heart-outline" color={"#e9e9e9"} size={32} />
+              <TouchableOpacity
+                onPress={() => SheetManager.show("wishlistSheet")}
+              >
+                <Ionicons name="heart-outline" color={"#e9e9e9"} size={32} />
+              </TouchableOpacity>
 
               <TouchableOpacity
                 onPress={() => SheetManager.show("cartSheet")}

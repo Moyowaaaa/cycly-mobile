@@ -24,7 +24,6 @@ export type bike = {
 
 export interface wishListItem {
   slug: string;
-
   inList?: boolean;
 }
 
@@ -36,4 +35,9 @@ export interface Item {
 export interface cartItem extends bike {
   slug: string;
   quantity: number;
+}
+
+export interface onWishlist extends bike {
+  slug: string;
+  inList?: boolean;
 }

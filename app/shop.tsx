@@ -19,33 +19,33 @@ const ShopScreen = () => {
   const { itemsInCart } = useStore(useCartStore);
   return (
     <>
-      <StatusBar style="dark" />
-
       <CustomSafeAreaView>
         <ScrollView>
-          <CustomHeader
-            background={route.name === "index" ? "transparent" : "#151515"}
-          >
+          <CustomHeader background="transparent">
             <View className="flex flex-row gap-4 items-center py-6">
               <Ionicons
                 name="arrow-back"
                 size={24}
                 className=""
-                color={"white"}
+                color={"#151515"}
                 onPress={() => router.push("/")}
               />
-              <Text className="text-[1.5rem] text-white">Shop</Text>
+              <Text className="text-[1.5rem] text-[#151515]">Shop</Text>
             </View>
 
             <View className="flex flex-row gap-2 items-center">
-              <Ionicons name="heart-outline" color={"#e9e9e9"} size={32} />
+              <TouchableOpacity
+                onPress={() => SheetManager.show("wishlistSheet")}
+              >
+                <Ionicons name="heart-outline" color={"#151515"} size={32} />
+              </TouchableOpacity>
 
               <TouchableOpacity
                 onPress={() => SheetManager.show("cartSheet")}
                 className="flex gap-1 flex-row items-center"
               >
-                <Ionicons name="cart-outline" color={"#e9e9e9"} size={32} />
-                <Text className="text-white text-[1.2rem]">
+                <Ionicons name="cart-outline" color={"#151515"} size={32} />
+                <Text className="text-[#151515] text-[1.2rem]">
                   ({itemsInCart})
                 </Text>
               </TouchableOpacity>

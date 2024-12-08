@@ -5,7 +5,7 @@ export const toastConfig = {
     <BaseToast
       {...props}
       style={{ borderLeftColor: "green" }}
-      text1Style={{ fontSize: 20, fontWeight: "400" }}
+      text1Style={{ fontSize: 10, fontWeight: "400" }}
       text2Style={{ fontSize: 15, fontWeight: "400" }}
     />
   ),

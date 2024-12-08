@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { SheetProvider } from "react-native-actions-sheet";
 import Toast from "react-native-toast-message";
 import { toastConfig } from "../utils/toastConfig"; // Replace with your path
+import { StatusBar } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -27,6 +28,8 @@ export default function RootLayout() {
 
   return (
     <>
+      <StatusBar barStyle={"dark-content"} />
+
       <SheetProvider>
         <Stack
           screenOptions={{
@@ -66,8 +69,15 @@ export default function RootLayout() {
               headerTintColor: "#FFFFFF",
             }}
           />
+          <Stack.Screen
+            name="checkout"
+            options={{
+              headerShown: false,
+            }}
+          />
         </Stack>
-        <Toast config={toastConfig} />
+
+        <Toast />
       </SheetProvider>
     </>
   );

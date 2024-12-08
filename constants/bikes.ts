@@ -35,7 +35,7 @@ export const bikes: bike[] = [
     },
   },
   {
-    name: " PeakMaster Pro",
+    name: "PeakMaster Pro",
     imageName: "mountainBike3",
     price: 175,
     type: ["Mountain Bikes"],

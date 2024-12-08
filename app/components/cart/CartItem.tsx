@@ -34,7 +34,9 @@ const CartItem = ({ bike }: { bike: cartItem }) => {
           </Text>
 
           <View className="flex flex-row justify-between items-center">
-            <Text className="text-[1.5rem] font-[DmMono]">${bike?.price}</Text>
+            <Text className="text-[1.5rem] font-[DmMono]">
+              ${bike?.price * bike.quantity}
+            </Text>
 
             <View className="flex gap-2 items-center flex-row">
               <TouchableOpacity
