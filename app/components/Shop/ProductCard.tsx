@@ -1,8 +1,6 @@
-import { bikes } from "@/constants/bikes";
 import { useCartStore } from "@/stores/CartStore";
 import { useWishlistStore } from "@/stores/WishlistStore";
 import { bike } from "@/types/declarations";
-import { removeLastLetter } from "@/utils/utils";
 import { Ionicons } from "@expo/vector-icons";
 import React, { useEffect, useMemo, useState } from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";

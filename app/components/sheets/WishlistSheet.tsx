@@ -4,8 +4,7 @@ import ActionSheet, { ScrollView } from "react-native-actions-sheet";
 import WishlistEmptyState from "../wishlist/WishlistEmptyState";
 import { useStore } from "zustand";
 import { useWishlistStore } from "@/stores/WishlistStore";
-import { cartItem, onWishlist } from "@/types/declarations";
-import CartItem from "../cart/CartItem";
+import { onWishlist } from "@/types/declarations";
 import { Ionicons } from "@expo/vector-icons";
 import Toast from "react-native-toast-message";
 
