@@ -2,15 +2,9 @@
 
 ## Screens
 
-![](https://res.cloudinary.com/dyap7epew/image/upload/v1733659202/cycly/screenshot/home.jpg)
-![](https://res.cloudinary.com/dyap7epew/image/upload/v1733659202/cycly/screenshot/home2.jpg)
-![](https://res.cloudinary.com/dyap7epew/image/upload/v1733659202/cycly/screenshot/shop.jpg)
-![](https://res.cloudinary.com/dyap7epew/image/upload/v1733659202/cycly/screenshot/shop2.jpg)
-![](https://res.cloudinary.com/dyap7epew/image/upload/v1733659202/cycly/screenshot/cartEmpty.jpg)
-![](https://res.cloudinary.com/dyap7epew/image/upload/v1733659202/cycly/screenshot/cartPage.jpg)
-![](https://res.cloudinary.com/dyap7epew/image/upload/v1733659202/cycly/screenshot/wishlist.jpg)
-![](https://res.cloudinary.com/dyap7epew/image/upload/v1733659202/cycly/screenshot/checkoutScreen.jpg)
-![](https://res.cloudinary.com/dyap7epew/image/upload/v1733659202/cycly/screenshot/footer.jpg)
+|                                                                                              |                                                                                               |
+| -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| ![](https://res.cloudinary.com/dyap7epew/image/upload/v1733659202/cycly/screenshot/home.jpg) | ![](https://res.cloudinary.com/dyap7epew/image/upload/v1733659202/cycly/screenshot/home2.jpg) | ![](https://res.cloudinary.com/dyap7epew/image/upload/v1733659202/cycly/screenshot/shop.jpg) | ![](https://res.cloudinary.com/dyap7epew/image/upload/v1733659202/cycly/screenshot/shop2.jpg) | ![](https://res.cloudinary.com/dyap7epew/image/upload/v1733659202/cycly/screenshot/cartEmpty.jpg) | ![](https://res.cloudinary.com/dyap7epew/image/upload/v1733659202/cycly/screenshot/cartPage.jpg) | ![](https://res.cloudinary.com/dyap7epew/image/upload/v1733659202/cycly/screenshot/wishlist.jpg) | ![](https://res.cloudinary.com/dyap7epew/image/upload/v1733659202/cycly/screenshot/checkoutScreen.jpg) | ![](https://res.cloudinary.com/dyap7epew/image/upload/v1733659202/cycly/screenshot/footer.jpg) |
 
 ## Tools and Technologies
 
