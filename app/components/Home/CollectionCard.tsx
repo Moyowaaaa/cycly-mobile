@@ -1,4 +1,3 @@
-import { prefixUrl } from "@/constants/constants";
 import { collectionType } from "@/types/declarations";
 import React from "react";
 import { Image, Platform, StyleSheet, Text, View } from "react-native";

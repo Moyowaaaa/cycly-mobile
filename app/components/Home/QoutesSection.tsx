@@ -1,7 +1,5 @@
-import { prefixUrl } from "@/constants/constants";
-import { MaterialIcons } from "@expo/vector-icons";
 import React from "react";
-import { Image, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import CustomButton from "../general/CustomButton";
 import { useRouter } from "expo-router";
 

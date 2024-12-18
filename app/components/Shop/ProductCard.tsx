@@ -4,7 +4,7 @@ import { bike } from "@/types/declarations";
 import { Ionicons } from "@expo/vector-icons";
 import React, { useEffect, useMemo, useState } from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
-import Svg, { Circle, Path, Rect } from "react-native-svg";
+import Svg, { Path } from "react-native-svg";
 import Toast from "react-native-toast-message";
 import { useStore } from "zustand";
 

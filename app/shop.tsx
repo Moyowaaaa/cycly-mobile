@@ -15,7 +15,6 @@ import { useCartStore } from "@/stores/CartStore";
 
 const ShopScreen = () => {
   const router = useRouter();
-  const route = useRoute();
   const { itemsInCart } = useStore(useCartStore);
   return (
     <>

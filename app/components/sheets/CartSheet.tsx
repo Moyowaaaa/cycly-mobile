@@ -10,7 +10,7 @@ import CartEmptyState from "../cart/CartEmptyState";
 import { Ionicons } from "@expo/vector-icons";
 import CartItem from "../cart/CartItem";
 import { cartItem } from "@/types/declarations";
-import { Link, router } from "expo-router";
+import { router } from "expo-router";
 
 const CartSheet = () => {
   const { itemsInCart, clearCart, productsInCart } = useStore(useCartStore);

@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Button,
-  Image,
-  ScrollView,
-  StatusBar,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import CustomSafeAreaView from "./components/general/CustomSafeAreaView";
 import CustomHeader from "./components/general/CustomHeader";
 import { useRouter } from "expo-router";

@@ -1,7 +1,6 @@
 import React from "react";
 import { ImageBackground, ImageBackgroundBase, Text, View } from "react-native";
 import CustomButton from "../general/CustomButton";
-import { prefixUrl } from "@/constants/constants";
 import { useRouter } from "expo-router";
 
 const TitleSection = () => {

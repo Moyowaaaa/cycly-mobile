@@ -3,18 +3,16 @@ import "../global.css";
 import { Ionicons } from "@expo/vector-icons";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { SheetProvider } from "react-native-actions-sheet";
 import Toast from "react-native-toast-message";
-import { toastConfig } from "../utils/toastConfig"; // Replace with your path
 import { StatusBar } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const router = useRouter();
-
-  const [loaded] = useFonts({
+  const [fontsLoaded] = useFonts({
     SansBold: require("../assets/fonts/GeneralSans-Bold.otf"),
     SansLight: require("../assets/fonts/GeneralSans-Light.otf"),
     SansMedium: require("../assets/fonts/GeneralSans-Medium.otf"),
@@ -23,13 +21,20 @@ export default function RootLayout() {
   });
 
   useEffect(() => {
-    if (loaded) SplashScreen.hideAsync();
-  }, [loaded]);
+    (async () => {
+      if (fontsLoaded) {
+        await SplashScreen.hideAsync();
+      }
+    })();
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) {
+    return null;
+  }
 
   return (
-    <>
+    <React.Fragment>
       <StatusBar barStyle={"dark-content"} />
-
       <SheetProvider>
         <Stack
           screenOptions={{
@@ -79,6 +84,6 @@ export default function RootLayout() {
 
         <Toast />
       </SheetProvider>
-    </>
+    </React.Fragment>
   );
 }

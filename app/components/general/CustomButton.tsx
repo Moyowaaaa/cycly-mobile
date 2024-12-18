@@ -1,6 +1,6 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import React from "react";
-import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 
 type buttonProps = {
   variant: "light" | "dark";

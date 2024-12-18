@@ -2,7 +2,7 @@ import { useCartStore } from "@/stores/CartStore";
 import { bike, cartItem } from "@/types/declarations";
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
-import { Image, Text, Touchable, TouchableOpacity, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import { useStore } from "zustand";
 
 const CartItem = ({ bike }: { bike: cartItem }) => {
